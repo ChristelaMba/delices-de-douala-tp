@@ -1,1 +1,11 @@
-<p>star-rating works!</p>
+<div class="star-rating" (mouseleave)="onLeave()">
+    @for (star of [1, 2, 3, 4, 5]; track star) {
+        <span class="star"
+             [class.filled] = "star <= displayRating()"
+             (mouseenter)="onHover(star)" // on déclenche la méthode onHover sur chaque étoile 
+             (click)="selectRating(star)">
+            ★
+        </span>
+    }
+
+</div>
