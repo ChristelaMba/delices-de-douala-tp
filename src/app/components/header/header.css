@@ -1,0 +1,27 @@
+.header {
+    background-color: #2D4A3E;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    color: #E9B824;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.counter {
+    color: #FAF3E0;
+    font-size: 1.1rem;
+    font-weight: bold;
+}

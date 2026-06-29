@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { StarRating } from "./components/star-rating/star-rating";
 import { RestaurantCard } from "./components/restaurant-card/restaurant-card";
 import { RestaurantList } from './components/restaurant-list/restaurant-list';
+import { Header } from "./components/header/header";
 
 interface Restaurant {
   id: number;
@@ -14,7 +15,7 @@ interface Restaurant {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, StarRating, RestaurantCard, RestaurantList],
+  imports: [RouterOutlet, StarRating, RestaurantCard, RestaurantList, Header],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
