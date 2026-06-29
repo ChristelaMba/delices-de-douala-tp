@@ -1,1 +1,16 @@
-<p>restaurant-card works!</p>
+<div class="restaurant-card">
+    <h3>{{ restaurant().name }}</h3>
+    <p class="district">{{ restaurant().district }}</p>
+    <p class="speciality">Spécialité : {{ restaurant().speciality}}</p>
+
+    <app-star-rating
+        [currentRating] = "restaurant().currentRating"
+        (ratingChanged) = "onRatingChanged($event)">
+    </app-star-rating>
+
+    @if (restaurant().currentRating > 0) {
+        <p class="rating-text">{{ restaurant().currentRating }}/5</p>
+    } @else {
+        <p class="rating-text">Cliquez !</p>
+    }
+</div>
