@@ -61,6 +61,17 @@ npm start
 
 Ouvrir [http://localhost:8080](http://localhost:8080).
 
+# Captures
+## Affichage sur Desktop
+<img width="896" height="561" alt="desktop1" src="https://github.com/user-attachments/assets/aff0e997-e688-43db-8e19-b2f2c3b3955e" />
+<img width="897" height="559" alt="desktop2" src="https://github.com/user-attachments/assets/769e0fbe-3b70-4e50-bc75-b2dd1d273c1b" />
+<img width="897" height="563" alt="desktop3" src="https://github.com/user-attachments/assets/868c961a-3f17-42a5-b855-4a5c17f64114" />
+
+## Affichage sur mobile
+<img width="217" height="468" alt="mobile1" src="https://github.com/user-attachments/assets/d70bd659-5d35-4ab5-9763-f413555e9d33" />
+<img width="218" height="467" alt="mobile2" src="https://github.com/user-attachments/assets/c0bf1baa-6fc3-4478-a096-3e2dd9522d44" />
+<img width="218" height="467" alt="mobile3" src="https://github.com/user-attachments/assets/7550dead-8485-47b4-a4e7-05d09f0f083f" />
+
 ## Auteur
 
 AKOUDJOU MBA Noëlly Christela — Apprenante Angular Talent Lab 2026 — Cohorte Douala
