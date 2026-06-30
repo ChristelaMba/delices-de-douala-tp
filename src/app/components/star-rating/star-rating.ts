@@ -22,6 +22,10 @@ export class StarRating {
   }
 
   selectRating(star: number) {
-    this.ratingChanged.emit(star); //On emet le output ratingChanged avec la valeur star
+    if (star === this.currentRating()) {
+      this.ratingChanged.emit(0);
+    } else {
+      this.ratingChanged.emit(star);
+    }
   }
 }

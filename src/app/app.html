@@ -1,2 +1,16 @@
-<app-header></app-header>
-<app-restaurant-list [restaurants]="restaurants()"></app-restaurant-list>
+<app-header [ratedCount]="ratedCount()" [averageRating]="averageRating()"></app-header>
+
+<div class="filter-bar">
+  <button (click)="toggleFilter()" [class.active]="isFilterActive()">
+    @if (isFilterActive()) {
+      Afficher tous les restaurants
+    } @else {
+      Filtrer : 4 étoiles et plus
+    }
+  </button>
+</div>
+
+<app-restaurant-list
+  [restaurants]="sortedRestaurants()"
+  (restaurantRated)="onRestaurantRated($event)">
+</app-restaurant-list>

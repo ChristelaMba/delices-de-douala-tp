@@ -2,7 +2,10 @@
     <div class="header-content">
         <h1 class="title">Délices de Douala</h1>
         <div class="counter">
-            ★ {{ ratedCount() }} / 6 restaurants notés
+          ★ {{ ratedCount() }} / 6 restaurants notés
+          @if (ratedCount() > 0) {
+            <span class="average"> · Moyenne : {{ averageRating() | number:'1.1-1' }}/5</span>
+            }
         </div>
     </div>
 </header>
