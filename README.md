@@ -1,59 +1,66 @@
-# DelicesDeDoualaTp
+# Délices de Douala — Système de notation de restaurants
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.1.
+> Application Angular de notation de restaurants camerounais à 5 étoiles.
+> Projet réalisé dans le cadre d'Angular Talent Lab 2026 — TP entre J7 et J8 (input/output sur 3 niveaux).
 
-## Development server
+🔗 **Démo en ligne** : [https://delices-de-douala-tp-rho.vercel.app](https://delices-de-douala-tp-rho.vercel.app)
 
-To start a local development server, run:
+## Technologies utilisées
 
-```bash
-ng serve
+- Angular 22
+- TypeScript 5.9+
+- Signals (`signal()`, `computed()`)
+- `input()` / `output()` (Standalone Components)
+- CSS Grid + Flexbox (responsive Desktop / Tablette / Mobile)
+
+## Fonctionnalités
+
+- ✅ Grille de 6 restaurants camerounais (Douala)
+- ✅ Système de notation par étoiles cliquables avec effet hover
+- ✅ Compteur en temps réel dans le header (« ★ X / 6 restaurants notés »)
+- ✅ Le compteur ne double pas lors d'un re-vote
+- ✅ Communication parent-enfant sur 3 niveaux via `input()` / `output()`
+- ✅ Mise à jour immuable des signals (`.update()` + `.map()`, sans mutation directe)
+- ✅ Responsive Desktop / Tablette / Mobile
+
+### Bonus implémentés
+
+- ✅ Note moyenne affichée dans le header
+- ✅ Retrait de note (reclic sur l'étoile déjà sélectionnée)
+- ✅ Tri des restaurants par note décroissante
+- ✅ Filtre toggle : afficher uniquement les restaurants notés ≥ 4 étoiles
+- ✅ Animation au survol des étoiles (`transform: scale`)
+
+## Architecture des composants
+
+```
+App
+├── Header
+│   ↑ [ratedCount, averageRating]
+│
+└── RestaurantList
+    ↑ (restaurantRated)
+    │
+    └── RestaurantCard × 6
+        ↑ (restaurantRated)
+        ↓ [restaurant]
+        │
+        └── StarRating
+            ↑ (ratingChanged)
+            ↓ [currentRating]
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Lancer le projet en local
 
 ```bash
-ng generate component component-name
+git clone https://github.com/ChristelaMba/delices-de-douala-tp.git
+cd delices-de-douala-tp
+npm install
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Ouvrir [http://localhost:8080](http://localhost:8080).
 
-```bash
-ng generate --help
-```
+## Auteur
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+AKOUDJOU MBA Noëlly Christela — Apprenante Angular Talent Lab 2026 — Cohorte Douala
