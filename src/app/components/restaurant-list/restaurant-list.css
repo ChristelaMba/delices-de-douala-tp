@@ -6,4 +6,27 @@
     
 }
 
+/*.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 40px;
+  column-gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}*/
+
+
+@media (max-width: 900px) {
+  .restaurant-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .restaurant-list {
+    grid-template-columns: 1fr;
+  }
+}
 
